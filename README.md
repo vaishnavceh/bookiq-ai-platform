@@ -86,3 +86,111 @@ book-rag-platform/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔹 Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+---
+
+### 🔹 Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🧪 Example API Usage
+
+### 🔹 Scrape Books
+
+Send a POST request to `/api/scrape/`:
+
+```json
+{
+  "max_pages": 6
+}
+```
+
+---
+
+### 🔹 Ask AI Question
+
+Send a POST request to `/api/ask/`:
+
+```json
+{
+  "question": "books about improving daily routine"
+}
+```
+
+---
+
+## 🔥 API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|------------|
+| `/api/books/` | GET | List all books |
+| `/api/books/<id>/` | GET | Book details |
+| `/api/books/<id>/recommendations/` | GET | Similar books |
+| `/api/scrape/` | POST | Scrape books |
+| `/api/index/` | POST | Generate embeddings |
+| `/api/ask/` | POST | Ask AI questions |
+
+---
+
+## 📸 Screenshots
+
+(Add your screenshots here)
+
+- Dashboard (stats + search)  
+- AI question page  
+- Book detail page  
+- Recommendation system  
+
+---
+
+## 💡 Key Highlights
+
+- Transitioned from keyword search → semantic search  
+- Implemented vector-based retrieval system  
+- Built full-stack architecture from scratch  
+- Integrated scraping + AI + frontend into one system  
+
+---
+
+## 🚀 Future Improvements
+
+- Integrate LLMs (OpenAI / local models)  
+- Improve summarization quality  
+- Add authentication system  
+- Deploy on cloud (AWS / Vercel)  
+- Real-time indexing  
+
+---
+
+## 👨‍💻 Author
+
+**Vaishnav Venugopal**  
+GitHub: https://github.com/vaishnavceh  
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub and feel free to contribute!
