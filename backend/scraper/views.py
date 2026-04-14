@@ -14,16 +14,14 @@ class ScrapeBooksView(APIView):
         saved_books = []
 
         for item in scraped_books:
-            book, created = Book.objects.get_or_create(
+            book, created = Book.objects.update_or_create(
                 book_url=item["book_url"],
                 defaults=item
             )
-            saved_books.append(
-                {
-                    "title": book.title,
-                    "created": created
-                }
-            )
+            saved_books.append({
+                "title": book.title,
+                "created": created
+            })
 
         return Response(
             {

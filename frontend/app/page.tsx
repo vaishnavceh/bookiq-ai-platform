@@ -139,7 +139,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-xl border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-sm text-yellow-200 transition group-hover:scale-105">
-                ⭐ {book.rating ?? "N/A"}
+                ⭐ {book.rating ? `${book.rating}/5` : "N/A"}
               </div>
             </div>
 
